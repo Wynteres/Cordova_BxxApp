@@ -1,49 +1,276 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> 
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Google Fonts: Lato -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Lato:500i" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>BxxAPP</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Aplicativo</p>
-                <p class="event received">Buxixo Bar</p>
-            </div>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#9b3375">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#9b3375">
+    
+    <!-- jQuery first, then Popper, then Bootstrap JS. -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <title>BXX BAR</title>
+
+  </head>
+  <body onload="Initializer()">
+
+    <div class="home--lista-mask lista-general">
+      <form>
+        <div class="row">
+          <div class="col-12">
+            <input id="nome" type="text" name="nome" class="form-control w-100 mb-3" placeholder="Nome completo:">
+          </div>
+          <div class="col-12">
+            <input id="email" type="email" name="email" class="form-control w-100 mb-3" placeholder="Seu e-mail:">
+          </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="home--lista-checkbox text-center py-3 mb-3">
+              <input value="2017-12-15" id="listas" type="checkbox" name="listas[]">
+              sex - 15.12 - W Rox – abertura MAD 
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="home--lista-checkbox text-center py-3 mb-3">
+              <input value="2017-12-16" id="listas" type="checkbox" name="listas[]">
+              sáb - 16.12 - Sherlock Rock 
+            </div>
+          </div>
+          <div class="col-12">
+            <a href="#" id="submit-nome-lista" class="btn btn--lista my-3 mb-md-5 mx-auto">+ Adicionar a lista</a>
+          </div>
+        </div>
+      </form>
+
+      <div class="text-center">
+        As listas devem ser enviadas até as 17h e estarão sujeitas a disponibilidade. <br>
+        Envie apenas um nome por vez. <br>
+        Caso tenha problemas com este formulário, ligue para nós: 11 4799-3010
+      </div>
+    </div>
+
+
+    <header>
+      <nav class="navbar navbar-expand-always p-0">
+        <button class="btn btn--lista-trigger lista-trigger-general px-2">
+          <i class="material-icons">&#xE065;</i>
+        </button>
+
+        <div class="navbar-menu">
+          <button class="navbar-toggler py-3" id="menuToggle">
+            <i class="fa fa-bars fa-lg text-white p-4"></i>
+          </button>
+
+          <div class="navbar-menu-inner">
+            <div class="d-block navbar-brand py-5 mx-0">
+              <img src="img/logo.png" class="img-fluid d-block mx-auto w-50">
+            </div>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item p-0">
+                <a class="nav-link p-4 px-5" href="index.html">Home</a>
+              </li>
+              <li class="nav-item p-0">
+                <a class="nav-link p-4 px-5" href="page.html">A Casa</a>
+              </li>
+              <li class="nav-item p-0">
+                <a class="nav-link p-4 px-5" href="#">Programação</a>
+              </li>
+              <li class="nav-item p-0">
+                <a class="nav-link p-4 px-5" href="#">Fotos</a>
+              </li>
+              <li class="nav-item p-0">
+                <a class="nav-link p-4 px-5" href="#">Lista</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Fim Cabeçalho -->
+
+    <!-- Início Conteúdo -->
+    <main>
+      <section class="section--header">
+
+        <div class="slider--programacao-outer mt-5">
+          <div id="programacao-slider" class="slider--programacao col-11 mx-auto">
+              <!-- Programação renderizada -->
+
+          </div>
+        </div>
+      </section>
+
+      <section class="lista--home px-5">
+        <div class="slider--programacao-lista lista-trigger">
+          <figure>
+            <img src="img/btn-lista.png" class="img-fluid d-block mx-auto col-4">
+            <figcaption class="rounded-circle"></figcaption>
+          </figure>
+        </div>
+        <div class="home--lista-mask pb-5">
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <input id="nome" type="text" name="nome" class="form-control w-100 mb-3" placeholder="Nome completo:">
+              </div>
+              <div class="col-12">
+                <input id="email" type="email" name="email" class="form-control w-100 mb-3" placeholder="Seu e-mail:">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="home--lista-checkbox text-center py-3 mb-3">
+                  <input value="2017-12-15" id="listas" type="checkbox" name="listas[]">
+                  sex - 15.12 - W Rox – abertura MAD 
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="home--lista-checkbox text-center py-3 mb-3">
+                  <input value="2017-12-16" id="listas" type="checkbox" name="listas[]">
+                  sáb - 16.12 - Sherlock Rock 
+                </div>
+              </div>
+              <div class="col-12">
+                <a href="#" id="submit-nome-lista" class="btn btn--lista my-3 mb-md-5 mx-auto">+ Adicionar a lista</a>
+              </div>
+            </div>
+          </form>
+
+          <div class="text-center">
+            As listas devem ser enviadas até as 17h e estarão sujeitas a disponibilidade. <br>
+            Envie apenas um nome por vez. <br>
+            Caso tenha problemas com este formulário, ligue para nós: 11 4799-3010
+          </div>
+        </div>
+      </section>
+
+      <section class="ultimas--coberturas">
+        <div class="container">
+          <h2 class="text-center mb-3">
+            <i class="fa fa-camera mr-2"></i>
+            Últimas coberturas
+          </h2>
+
+          <div class="slider--coberturas-outer">
+            <div class="slider--coberturas col-11 mx-auto">
+
+              <div class="slider--coberturas-item px-3">
+                <img src="img/thumb.png" class="img-fluid mt-3 d-block mx-auto">
+                <h1 class="d-flex align-items-center justify-content-between mt-3">
+                  <span>Double Shot</span>
+                  <div class="square p-3 text-center">
+                    16
+                    <small class="d-block">set</small>
+                  </div>
+                </h1>
+              </div>
+              <div class="slider--coberturas-item px-3">
+                <img src="img/thumb.png" class="img-fluid mt-3 d-block mx-auto">
+                <h1 class="d-flex align-items-center justify-content-between mt-3">
+                  <span>Double Shot</span>
+                  <div class="square p-3 text-center">
+                    16
+                    <small class="d-block">set</small>
+                  </div>
+                </h1>
+              </div>
+              <div class="slider--coberturas-item px-3">
+                <img src="img/thumb.png" class="img-fluid mt-3 d-block mx-auto">
+                <h1 class="d-flex align-items-center justify-content-between mt-3">
+                  <span>Double Shot</span>
+                  <div class="square p-3 text-center">
+                    16
+                    <small class="d-block">set</small>
+                  </div>
+                </h1>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Fim Conteúdo -->
+
+    <!-- Início Rodapé -->
+    <footer class="p-3 mt-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+
+          <a href="" class="col text-center p-3">
+            <i class="material-icons">&#xE065;</i> <br>
+            <div class="d-block mt-1">
+              Seu nome <br>
+              na Lista
+            </div>
+          </a>
+          <a href="" class="col text-center p-3">
+            <i class="fa fa-camera fa-lg mb-2"></i> <br>
+            <div class="d-block mt-1">
+              Galeria de <br>
+              Fotos
+            </div>
+          </a>
+          <a href="" class="col text-center p-3">
+            <i class="fa fa-check-square-o fa-lg mb-2"></i> <br>
+            <div class="d-block mt-1">
+              Fale <br>
+              Conosco
+            </div>
+          </a>
+          
+        </div>
+      </div>
+      <div id="backMask"></div>
+    </footer>
+    <!-- Fim Rodapé -->
+
+    <script type="text/javascript" src="js/initialize.js"></script>
+
+  </body>
 </html>

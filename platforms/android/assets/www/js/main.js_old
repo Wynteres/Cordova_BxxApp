@@ -1,0 +1,44 @@
+$("#btn1").on("click tap", function(){
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "http://bxxbar.com.br/wp-json/bxxapp/galerias",
+	  "method": "GET",
+	  "headers": {
+	    "authorization": "Basic YWRtaW46RVlGOSNWeDMjTSZpQnA3biQq",
+	    "cache-control": "cache",
+	    "postman-token": "b84bc478-0b5b-3abd-020a-769aa4fe83ed"
+	  }
+	}
+
+	$.ajax(settings).done(function (response) {
+		console.log(response);
+		response.forEach((item) => {
+			$("#fotos-grid").append('<img src="' + item.thumb + '"><br>');
+		})
+	});
+
+})
+
+
+$("#btn2").on("click tap", function(){
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": "http://bxxbar.com.br/wp-json/bxxapp/programacao?showposts=6",
+	  "method": "GET",
+	  "headers": {
+	    "authorization": "Basic YWRtaW46RVlGOSNWeDMjTSZpQnA3biQq",
+	    "cache-control": "cache",
+	    "postman-token": "b84bc478-0b5b-3abd-020a-769aa4fe83ed"
+	  }
+	}
+
+	$.ajax(settings).done(function (response) {
+		console.log(response);
+		response.forEach((item) => {
+			$("#item-grid").append(item.title +"<br>");
+		})
+	});
+
+})

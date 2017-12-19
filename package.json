@@ -11,10 +11,12 @@
   "license": "Apache-2.0",
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-splashscreen": {}
     }
   },
   "dependencies": {
+    "cordova-android": "6.3.0",
     "cordova-plugin-whitelist": "1"
   }
 }

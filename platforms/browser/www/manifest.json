@@ -4,8 +4,16 @@
   "name": "BxxAPP",
   "short_name": "BxxAPP",
   "version": "br.com.bxxbar",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
-  "icons": [],
-  "start_url": "index.html"
+  "description": "Aplicativo Buxixo Bar",
+  "author": "Actmob Marketing Digital",
+  "icons": [
+    {
+      "src": "resources/ios/icon/icon-small@3x.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "orientation": "portrait",
+  "start_url": "index.html",
+  "theme_color": "#9b3375"
 }
