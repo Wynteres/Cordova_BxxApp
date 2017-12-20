@@ -17,8 +17,8 @@
  * under the License.
  */
  
- function addSlick() {
- 	
+
+function addSlickProgramacao() { 
 	$('.slider--programacao').slick({
 		infinite : false,
 		dots : false,
@@ -28,7 +28,8 @@
 		slidesToShow : 1,
 		slidesToScroll : 1
 	});
-
+}
+ function addSlickCover() {
 	$('.slider--coberturas').slick({
 		infinite : false,
 		dots : false,
@@ -38,7 +39,10 @@
 		slidesToShow : 1,
 		slidesToScroll : 1
 	});
+ }
 
+ function removeLoader(){
+ 	$('.ajax-loader').fadeOut('slow').removeClass("loader-active");
  }
 $(document).ready(function() {
 

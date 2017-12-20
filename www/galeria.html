@@ -59,7 +59,7 @@
 
 
 
-   <body onload="initializer()">
+   <body onload="initializeGaleria()">
 
       <div class="ajax-loader loader-active">
         <img class="w-50" src="img/logo.png">
@@ -148,85 +148,34 @@
       <!-- Fim Cabeçalho -->
   </div>
 
-      <!-- Início Conteúdo -->
-      <main>
-        <section class="section--header">
-
-          <div class="slider--programacao-outer mt-5">
-            <div id="programacao-slider" class="slider--programacao col-11 mx-auto">
-                <!-- Programação renderizada -->
-
+    <!-- Início Conteúdo -->
+    <main>
+      <section class="section--header progamacao">
+        <div class="container">
+          <!-- 
+          <h4 class="d-flex align-items-center justify-content-between mt-3">
+            <span class="pr-3">Fernando Aniteri apresenta o Teatro Mágico</span>
+            <div class="square p-3 text-center">
+              16
+              <small class="d-block">set</small>
             </div>
-          </div>
-        </section>
-
-        <section class="lista--home px-2">
-          <div class="slider--programacao-lista lista-trigger">
-            <figure>
-              <img src="img/btn-lista.png" class="img-fluid d-block mx-auto col-4">
-              <figcaption class="rounded-circle"></figcaption>
-            </figure>
-          </div>
-          <div class="home--lista-mask pb-5">
-            <form>
-              <div class="row">
-                <div class="col-12">
-                  <input id="nome" type="text" name="nome" class="form-control w-100 mb-3" placeholder="Nome completo:">
-                </div>
-                <div class="col-12">
-                  <input id="email" type="email" name="email" class="form-control w-100 mb-3" placeholder="Seu e-mail:">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-12">
-                  <div class="home--lista-checkbox text-center py-3 mb-3">
-                    <input value="2017-12-15" id="listas" type="checkbox" name="listas[]">
-                    sex - 15.12 - W Rox – abertura MAD 
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="home--lista-checkbox text-center py-3 mb-3">
-                    <input value="2017-12-16" id="listas" type="checkbox" name="listas[]">
-                    sáb - 16.12 - Sherlock Rock 
-                  </div>
-                </div>
-                <div class="col-12">
-                  <a href="#" id="submit-nome-lista" class="btn btn--lista my-3 mb-md-5 mx-auto">+ Adicionar a lista</a>
-                </div>
-              </div>
-            </form>
-
-            <div class="text-center">
-              As listas devem ser enviadas até as 17h e estarão sujeitas a disponibilidade. <br>
-              Envie apenas um nome por vez. <br>
-              Caso tenha problemas com este formulário, ligue para nós: 11 4799-3010
-            </div>
-          </div>
-        </section>
-
-
-        <section class="ultimas--coberturas">
-          <div class="container">
-            <h2 class="text-center mb-3">
-              <i class="fa fa-camera mr-2"></i>
-              Últimas coberturas
-            </h2>
-
-
+          </h4>
+          -->
 
             <div class="slider--coberturas-outer">
-              <div id="galeria-slider" class="slider--coberturas col-11 mx-auto">
+              <div id="Galeria-grid" class="slider--coberturas col-11 mx-auto">
                 <!-- Programação renderizada -->
 
 
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <!-- Fim Conteúdo -->
 
+              </div>
+              <input type="hidden" id="galeria-loader" value="5" name="">
+            </div>
+
+        </div>
+      </section>
+    </main>
+    <!-- Fim Conteúdo -->
       <!-- Início Rodapé -->
       <footer class="p-3 mt-5">
         <div class="container">

@@ -15,6 +15,8 @@ figcaption,
 .home--lista-mask,
 .home--lista-checkbox,
 .btn--lista-trigger,
+.ajax-loader,
+#programacao-slider,
 #backMask {
   transition: 0.3s all ease-out;
   -o-transition: 0.3s all ease-out;
@@ -190,23 +192,30 @@ article {
 .section--header {
   background: url("../img/fundo-cores.png") no-repeat top center;
   background-size: cover;
-  padding: 80px 0; }
+  padding: 40px 0 80px; }
   .section--header h1 {
     color: #fafafa;
-    font-size: 50px;
-    font-size: 3.125rem;
+    font-size: 35px;
+    font-size: 2.1675rem;
     line-height: 1.15; }
     .section--header h1 small {
       font-family: 'Lato';
       font-weight: 500;
       font-style: italic;
-      font-size: 20px;
-      font-size: 1.25rem; }
-
+      font-size: 26px;
+      font-size: 1.625rem; }
 .ultimas--coberturas h2 {
   font-size: 38px;
   font-size: 2.375rem; }
 
+.programacao {
+  font-size: 32px !important;
+  font-size: 2rem !important;
+  line-height: 1 !important;
+}
+.programacao-item{
+  margin-bottom: 32px;
+}      
 .lista-general {
   position: fixed;
   top: 0;
@@ -316,3 +325,44 @@ footer {
     font-size: 26px !important; }
 
 /*# sourceMappingURL=style.css.map */
+
+.slick-track{
+  display: flex;
+  align-items: flex-end;
+}
+
+.ajax-loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  background-color: #161925;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/fundo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.ajax-loader.loader-active{
+  visibility: visible;
+  opacity: 1;
+  z-index: 9998;
+}
+.ajax-loader .carregando{
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 9999;
+}
